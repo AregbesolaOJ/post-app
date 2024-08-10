@@ -1,9 +1,12 @@
+import { Posts } from './components';
+
 function App() {
   return (
-    <div className="">
-      <header className="">
-        <p>Post App</p>
-      </header>
+    <div className="content">
+      <section className="container">
+        <h1>Posts Listing</h1>
+        <Posts />
+      </section>
     </div>
   );
 }
