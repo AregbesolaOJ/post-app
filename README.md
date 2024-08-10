@@ -40,7 +40,7 @@ To run the app locally:
 
 1. pull this repo
 2. install dependencies
-   1. Node: use version listed in `.node-version`.
+   1. Node: use at least Node 16 or version listed in `.node-version`.
    2. Packages: using NPM: `npm install`
 3. run the app in dev mode: `npm start`
 4. you can now access the app on [localhost:3000](http://localhost:3000)
