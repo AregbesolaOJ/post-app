@@ -15,7 +15,7 @@ type PostProps = {
   comments: Comment[];
 };
 
-export function SinglePost({ post, user, comments }: PostProps) {
+function SinglePost({ post, user, comments }: PostProps) {
   return (
     <section id="post" className="post">
       <div className="post-header">
@@ -42,3 +42,7 @@ export function SinglePost({ post, user, comments }: PostProps) {
     </section>
   );
 }
+
+SinglePost.displayName = 'SinglePost';
+
+export { SinglePost as Post };

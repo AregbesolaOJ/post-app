@@ -4,21 +4,22 @@ import {
   useRetrievePosts,
   useRetrieveUsers
 } from '../queries';
-import { SinglePost } from './post';
+import { Post } from './post';
 import { getErrorMessage } from '../lib/utils';
 
-type PostProps = {};
-
-export function Posts({ ..._props }: PostProps) {
+//  Posts component encapsulating fetch/display logic for all posts
+export function Posts() {
   const { postsData, postsError, loadingPosts } = useRetrievePosts();
   const { usersData } = useRetrieveUsers();
   const { commentsData } = useRetrieveComments();
 
+  //  dedicated callback to get the user entity that created each post: expects `userId`
   const getPostUser = useCallback(
     (userId: number) => (usersData || []).find((user) => user.id === userId),
     [usersData]
   );
 
+  //  dedicated callback to get the comment(s) for each post: expects the `postId`
   const getPostComments = useCallback(
     (postId: number) =>
       (commentsData || []).filter((comment) => comment.postId === postId),
@@ -44,7 +45,7 @@ export function Posts({ ..._props }: PostProps) {
   return (
     <section id="posts" className="posts">
       {(postsData || []).map((post) => (
-        <SinglePost
+        <Post
           post={post}
           user={getPostUser(post.userId)}
           comments={getPostComments(post.id)}
