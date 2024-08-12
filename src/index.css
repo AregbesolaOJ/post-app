@@ -15,3 +15,111 @@ code {
 }
 
 /* No need to focus on UI/UX design but if you can, come back to add some mininal styling nothing serious */
+.container {
+  max-width: 800px;
+  margin: 20px auto;
+}
+
+.no-posts {
+  height: 75vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Styling for the posts container */
+.posts {
+  padding: 20px;
+  background-color: #fff;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+/* Styling for the post header */
+.post-header {
+  border-bottom: 1px solid #ddd;
+  padding-bottom: 10px;
+  margin-bottom: 10px;
+}
+
+.post-title {
+  font-size: 24px;
+  color: #333;
+  text-transform: capitalize;
+}
+
+.user-info {
+  font-size: 14px;
+  color: #888;
+}
+
+.user-name {
+  font-weight: bold;
+}
+
+.user-username {
+  margin-left: 5px;
+  color: #bbb;
+}
+
+.post {
+  margin-bottom: 2.5rem;
+}
+
+/* Styling for the post content */
+.post-content {
+  margin-bottom: 20px;
+}
+
+.post-content p {
+  margin-bottom: 10px;
+  font-size: 16px;
+  color: #444;
+}
+
+/* Styling for the comments section */
+.post-comments {
+  background-color: #f0f0f0;
+  padding: 10px;
+  border-radius: 5px;
+}
+
+.post-comments h3 {
+  font-size: 18px;
+  margin-bottom: 10px;
+  color: #555;
+}
+
+.comment {
+  margin-bottom: 10px;
+}
+
+.comment-user {
+  font-weight: bold;
+  color: #333;
+  text-transform: lowercase;
+}
+
+.comment-text {
+  margin-left: 5px;
+  color: #555;
+}
+
+/* Additional styling for responsiveness */
+@media (max-width: 600px) {
+  .container {
+    padding: 10px;
+  }
+
+  .post-title {
+    font-size: 20px;
+  }
+
+  .post-content p {
+    font-size: 14px;
+  }
+
+  .post-comments h3 {
+    font-size: 16px;
+  }
+}
