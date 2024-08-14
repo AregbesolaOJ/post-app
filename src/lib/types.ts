@@ -4,11 +4,11 @@ export type SectionName = (typeof resources)[number];
 
 export type FetcherProps = {
   /**
-   * `urlPath`: the allowed resources to be fetched from the base url, one of: "/posts", "/users", "/comments"
+   * `urlPath`: the allowed resources to be fetched from the base url, one of: "/posts", "/users", "/comments" ( and/or with a possible appended query parameter)
    *
    * @see {@link https://jsonplaceholder.typicode.com}
    */
-  urlPath: `/${SectionName}`;
+  urlPath: `/${SectionName}` | `/${SectionName}?${string}`;
 
   /**
    * `skip`: a boolean value specifying whether to initiate the request or not

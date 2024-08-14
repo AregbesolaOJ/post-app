@@ -43,3 +43,22 @@ export function useRetrieveComments() {
     loadingComments: isLoading
   };
 }
+
+export function useRetrieveSinglePostComments({
+  postId,
+  skip
+}: {
+  postId: number;
+  skip?: boolean;
+}) {
+  const { data, error, isLoading } = useFetcher<Comment[]>({
+    urlPath: `/comments?postId=${postId}`,
+    skip
+  });
+
+  return {
+    postCommentsData: data,
+    postCommentsError: error,
+    loadingPostComments: isLoading
+  };
+}

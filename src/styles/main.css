@@ -82,12 +82,27 @@ code {
   background-color: #f0f0f0;
   padding: 10px;
   border-radius: 5px;
+  min-height: 5rem;
 }
 
 .post-comments h3 {
   font-size: 18px;
   margin-bottom: 10px;
   color: #555;
+}
+.post-comments p {
+  text-align: center;
+  color: #555;
+}
+
+.post-comments-toggle {
+  color: #f0f0f0;
+  background-color: #282c34;
+  border-radius: 8px;
+  padding: 0.5rem 1rem;
+  border: none;
+  cursor: pointer;
+  margin-bottom: 1rem;
 }
 
 .comment {
