@@ -44,3 +44,7 @@ To run the app locally:
    2. Packages: using NPM: `npm install`
 3. run the app in dev mode: `npm start`
 4. you can now access the app on [localhost:3000](http://localhost:3000)
+
+## User Experience Flow
+
+The `main` branch contains a flow that lets you view all posts with it's respective comments on page load, while the `with-comments-lazyload` branch implements an alternate experience with comments for each post getting fetched per button trigger. Feel free to check out that branch as well.
